@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com Lista</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Inclusão do Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Seção 1: Cadastro -->
+    <header>
+        <div class="landing-header">
+            <h1>Cadastre seu prato!</h1>
+            <p>Preencha os campos abaixo para adicionar um prato à nossa lista de itens.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Conteúdo Principal - Cadastro -->
+        <div class="conteudo-principal">
+            <form id="formulario">
+                <div class="container-principal-do-cadastro">
+                    <h2>Cadastre seu Prato</h2>
+                    
+                    <!-- Campo para Nome -->
+                    <div class="input-nome">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                    </div>
+                    
+                    <!-- Campo para Seleção de Prato -->
+                    <div class="input-prato">
+                        <label for="opcoes">Selecione uma opção:</label>
+                        <select id="opcoes" name="opcoes" required>
+                            <option value="">-- Selecione --</option>
+                            <!-- As opções serão carregadas aqui dinamicamente -->
+                        </select>
+                    </div>
+
+                    <!-- Botão de Submissão -->
+                    <div class="button-submit">
+                        <button type="submit">Adicionar</button>
+                    </div>
+                </div>
+                
+                <!-- Mensagem de Erro -->
+                <div id="mensagemErro" class="erro">
+                    
+                </div>
+            </form>
+        </div>
+
+        <!-- Seção 2: Lista de Itens Cadastrados -->
+        <div class="lista-itens">
+            <h2>Itens Cadastrados</h2>
+            <div class="lista-itens-cadastrados-cabecalho">
+                <span>Nome</span>
+                <span>Prato</span>
+            </div>
+            <div class="lista-itens-cadastrados" id="lista">
+                <!-- Os itens serão inseridos dinamicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

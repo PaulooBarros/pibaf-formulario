@@ -1,0 +1,257 @@
+/* Estilos gerais */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Fonte mais estilosa */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('../imgs/background-teste.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .landing-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+header .landing-header p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Container Principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Formulário de Cadastro */
+.conteudo-principal {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.container-principal-do-cadastro h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos dos campos de formulário */
+.input-nome,
+.input-prato {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    /* Ambos ocupam 100% */
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    /* Ambos ocupam 100% */
+    max-width: 1120px;
+    /* Limite opcional */
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ddd;
+}
+
+select {
+    width: 100%;
+    /* Ambos ocupam 100% */
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ddd;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Lista de Itens Cadastrados */
+.lista-itens {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lista-itens h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.lista-itens-cadastrados-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.lista-itens-cadastrados {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lista-itens-cadastrados div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #ddd;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Estilos para a mensagem de erro */
+#mensagemErro {
+    display: none; /* Inicialmente oculto */
+    background-color: rgba(255, 0, 0, 0.9); /* Vermelho translúcido */
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+    max-width: 1120px; /* Limita a largura */
+    margin: 20px auto; /* Centraliza horizontalmente */
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#mensagemErro.sucesso {
+    display: none; /* Inicialmente oculto */
+    background-color: rgba(4, 117, 65, 0.9); /* Vermelho translúcido */
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+    max-width: 1120px; /* Limita a largura */
+    margin: 20px auto; /* Centraliza horizontalmente */
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Animação de fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsividade para telas médias (máx. 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .input-nome input {
+        width: calc(98% - 4px);
+        /* Ajuste leve para margens menores */
+    }
+
+    .input-prato select {
+        width: 100%;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    #mensagemErro {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}
+
+/* Responsividade para telas pequenas (máx. 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .input-nome input {
+        width: calc(98% - 8px);
+        /* Adaptação adicional para telas menores */
+    }
+
+    .input-prato select {
+        width: 100%;
+    }
+
+    input,
+    select,
+    button {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    #mensagemErro {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+}

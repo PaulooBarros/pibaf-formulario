@@ -1,0 +1,41 @@
+{
+  "itensCadastrados": [
+    {
+      "id": "621d",
+      "nome": "asdasda",
+      "opcaoSelecionada": "Arroz (1 Kg)"
+    }
+  ],
+  "opcoesDeItens": [
+    {
+      "id": "1",
+      "tipo": "Arroz",
+      "quantidade": "1 Kg",
+      "limite": 1
+    },
+    {
+      "id": "2",
+      "tipo": "Farofa",
+      "quantidade": "5Kg",
+      "limite": 2
+    },
+    {
+      "id": "3",
+      "tipo": "Galeto",
+      "quantidade": "4 Kg",
+      "limite": 3
+    },
+    {
+      "id": "4",
+      "tipo": "Feijão",
+      "quantidade": "5Kg",
+      "limite": 3
+    },
+    {
+      "id": "5",
+      "tipo": "Carne de boi",
+      "quantidade": "5Kg",
+      "limite": 2
+    }
+  ]
+}
